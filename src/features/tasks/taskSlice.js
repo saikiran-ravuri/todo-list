@@ -8,7 +8,17 @@ const initialState = {
 const taskSlice = createSlice({
   name: "tasks",
   initialState,
-  reducers: {},
+  reducers: {
+    addTask: (state, action) => {
+      state.items.push({
+        id: crypto.randomUUID(),
+        title: action.payload,
+        completed: false,
+      });
+    },
+  },
 });
+
+export const { addTask } = taskSlice.actions;
 
 export default taskSlice.reducer;
