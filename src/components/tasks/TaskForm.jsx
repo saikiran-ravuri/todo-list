@@ -17,24 +17,23 @@ function TaskForm() {
     }
 
     dispatch(addTask(trimmedTitle));
-
     setTitle("");
   };
 
   return (
-    <section className="mb-6">
-      <form onSubmit={handleSubmit} className="flex gap-3">
+    <section className="mb-8">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row">
         <input
           type="text"
-          placeholder="Enter a new task..."
+          placeholder="What needs to be done?"
           value={title}
           onChange={(event) => setTitle(event.target.value)}
-          className="flex-1 rounded-lg border border-slate-300 px-4 py-3 text-slate-900 outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200"
+          className="flex-1 rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-200"
         />
 
         <button
           type="submit"
-          className="rounded-lg bg-slate-900 px-5 py-3 font-medium text-white transition hover:bg-slate-800 active:scale-[0.98]"
+          className="rounded-xl bg-slate-900 px-6 py-3 font-medium text-white transition hover:bg-slate-800 active:scale-[0.98]"
         >
           Add Task
         </button>

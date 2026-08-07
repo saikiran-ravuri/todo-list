@@ -21,8 +21,16 @@ function TaskList() {
   if (filteredTasks.length === 0) {
     return (
       <section>
-        <div className="rounded-xl border-2 border-dashed border-slate-300 py-12 text-center">
-          <p className="text-slate-500">No tasks found.</p>
+        <div className="rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50 py-12 text-center">
+          <div className="mb-3 text-5xl">📝</div>
+
+          <h2 className="text-lg font-semibold text-slate-800">
+            No tasks found
+          </h2>
+
+          <p className="mt-2 text-sm text-slate-500">
+            Add a new task or change the selected filter.
+          </p>
         </div>
       </section>
     );
@@ -30,7 +38,7 @@ function TaskList() {
 
   return (
     <section>
-      <ul className="space-y-3">
+      <ul className="space-y-4">
         {filteredTasks.map((task) => (
           <TaskItem key={task.id} task={task} />
         ))}

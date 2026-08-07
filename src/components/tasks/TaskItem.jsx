@@ -6,8 +6,8 @@ function TaskItem({ task }) {
   const dispatch = useDispatch();
 
   return (
-    <li className="flex items-center justify-between gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:shadow-md">
-      <div className="flex flex-1 items-center gap-3">
+    <li className="flex items-center justify-between gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md">
+      <div className="flex flex-1 items-center gap-4">
         <input
           type="checkbox"
           checked={task.completed}
@@ -16,8 +16,10 @@ function TaskItem({ task }) {
         />
 
         <span
-          className={`flex-1 break-words text-base font-medium ${
-            task.completed ? "text-slate-400 line-through" : "text-slate-800"
+          className={`flex-1 break-words text-base transition ${
+            task.completed
+              ? "text-slate-400 line-through"
+              : "font-medium text-slate-800"
           }`}
         >
           {task.title}
@@ -27,7 +29,7 @@ function TaskItem({ task }) {
       <button
         type="button"
         onClick={() => dispatch(deleteTask(task.id))}
-        className="shrink-0 rounded-lg bg-red-500 px-3 py-2 text-sm font-medium text-white transition hover:bg-red-600 active:scale-[0.98]"
+        className="shrink-0 rounded-xl bg-red-500 px-4 py-2 text-sm font-medium text-white transition-all duration-200 hover:bg-red-600 active:scale-95"
       >
         Delete
       </button>

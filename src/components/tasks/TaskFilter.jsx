@@ -13,17 +13,17 @@ function TaskFilter() {
   ];
 
   return (
-    <section className="mb-6">
-      <div className="flex items-center justify-center gap-3">
+    <section className="mb-8">
+      <div className="flex flex-wrap items-center justify-center gap-3">
         {filters.map(({ label, value }) => (
           <button
             key={value}
             type="button"
             onClick={() => dispatch(setFilter(value))}
-            className={`rounded-lg px-4 py-2 text-sm font-medium transition ${
+            className={`rounded-xl px-5 py-2.5 text-sm font-medium transition-all duration-200 ${
               filter === value
-                ? "bg-slate-900 text-white"
-                : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                ? "bg-slate-900 text-white shadow-md"
+                : "border border-slate-300 bg-white text-slate-700 hover:bg-slate-100"
             }`}
           >
             {label}
