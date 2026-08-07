@@ -1,7 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const loadTasks = () => {
+  const storedTasks = localStorage.getItem("tasks");
+
+  if (storedTasks) {
+    return JSON.parse(storedTasks);
+  }
+
+  return [];
+};
+
 const initialState = {
-  items: [],
+  items: loadTasks(),
   filter: "all",
 };
 
@@ -18,11 +28,15 @@ const taskSlice = createSlice({
     },
 
     deleteTask: (state, action) => {
-      state.items = state.items.filter((task) => task.id !== action.payload);
+      state.items = state.items.filter(
+        (task) => task.id !== action.payload
+      );
     },
 
     toggleTask: (state, action) => {
-      const task = state.items.find((task) => task.id === action.payload);
+      const task = state.items.find(
+        (task) => task.id === action.payload
+      );
 
       if (task) {
         task.completed = !task.completed;
@@ -35,6 +49,11 @@ const taskSlice = createSlice({
   },
 });
 
-export const { addTask, deleteTask, toggleTask, setFilter } = taskSlice.actions;
+export const {
+  addTask,
+  deleteTask,
+  toggleTask,
+  setFilter,
+} = taskSlice.actions;
 
 export default taskSlice.reducer;
