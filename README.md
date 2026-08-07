@@ -1,16 +1,161 @@
-# React + Vite
+# ✅ TaskFlow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Modern Task Management Application
 
-Currently, two official plugins are available:
+A responsive React application for managing daily tasks with task creation, completion tracking, filtering, and Local Storage persistence.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**React • Redux Toolkit • Tailwind CSS • Local Storage • Responsive Design**
 
-## React Compiler
+🌐 **Live Demo:** https://your-vercel-url.vercel.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+# 📖 Overview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The **TaskFlow** is a responsive React application for managing daily tasks through a clean and intuitive interface.
+
+It allows users to add, complete, delete, and filter tasks while persisting data using Local Storage.
+
+---
+
+# ✨ Features
+
+### 📝 Task Management
+
+- Add new tasks
+- Mark tasks as completed
+- Delete existing tasks
+- Automatic Local Storage persistence
+
+### 🔍 Task Organization
+
+- View all tasks
+- Filter active tasks
+- Filter completed tasks
+- Organize daily tasks
+
+### ⚛️ State Management
+
+- Global state management
+- Redux Toolkit integration
+- Predictable state updates
+- Centralized application store
+
+### 🎨 User Experience
+
+- Responsive design
+- Clean and modern interface
+- Local Storage persistence
+- Smooth user interactions
+
+---
+
+# 🛠️ Tech Stack
+
+| Category | Technology |
+| -------- | ---------- |
+| Frontend | React 19 |
+| State Management | Redux Toolkit, React Redux |
+| Build Tool | Vite |
+| Language | JavaScript (ES6+) |
+| Styling | Tailwind CSS |
+| Storage | Local Storage |
+| Version Control | Git & GitHub |
+| Deployment | Vercel |
+
+---
+
+# 📂 Project Structure
+
+```text
+todo-list/
+│
+├── public/
+├── src/
+│   ├── app/
+│   │   └── store.js
+│   │
+│   ├── components/
+│   │   └── tasks/
+│   │       ├── TaskFilter.jsx
+│   │       ├── TaskForm.jsx
+│   │       ├── TaskItem.jsx
+│   │       └── TaskList.jsx
+│   │
+│   ├── features/
+│   │   └── tasks/
+│   │       └── taskSlice.js
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+---
+
+# 🚀 Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/saikiran-ravuri/todo-list.git
+```
+
+### Navigate to the project
+
+```bash
+cd todo-list
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start the development server
+
+```bash
+npm run dev
+```
+
+Open your browser and visit:
+
+```
+http://localhost:5173
+```
+
+### Build for production
+
+```bash
+npm run build
+```
+
+---
+
+# 📈 Future Enhancements
+
+- Edit Tasks
+- Task Priorities
+- Due Dates
+- Search Functionality
+- Dark Mode
+- Backend Integration
+
+---
+
+# 👨‍💻 Author
+
+**Ravuri Sai Kiran**
+
+- GitHub: https://github.com/saikiran-ravuri
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a **Star ⭐** on GitHub.
